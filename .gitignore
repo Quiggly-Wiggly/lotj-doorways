@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+build/
+.upstream-ui/
+lotj-doorways.json*
+*.dat
