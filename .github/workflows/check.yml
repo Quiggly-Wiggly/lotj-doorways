@@ -4,16 +4,16 @@ permissions:
   contents: read
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
         with:
           python-version: '3.12'
       - name: Install LuaJIT
         run: sudo apt-get update && sudo apt-get install -y luajit
       - name: Check out the supported public mapper
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
         with:
           repository: LotJ/lotj-mudlet-ui
           ref: dc6ae9c471c6aa8e4dcfdb4814b79a4cc0c3753c
