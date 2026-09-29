@@ -145,3 +145,9 @@ Source references: [LotJ mapper](https://github.com/LotJ/lotj-mudlet-ui/blob/dc6
 [Mudlet package format](https://wiki.mudlet.org/w/Manual:Package_Manager).
 
 </details>
+
+## Public release data
+
+Packages start without character settings or saved game data. Examples and test
+fixtures are fictional; substitute your own locally learned names and commands.
+Profile files, room rules, ship names, landing pads, and map exports stay local.

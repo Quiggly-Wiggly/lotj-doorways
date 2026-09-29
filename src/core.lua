@@ -2,7 +2,7 @@
 -- Reloads replace the namespace only after detaching the previous instance.
 local blockedGmcp = lotjDoorways and lotjDoorways.state and lotjDoorways.state.gmcpBlocked
 if lotjDoorways and lotjDoorways.shutdown then lotjDoorways.shutdown() end
-lotjDoorways = { version = "1.3.1", packageName = "lotj-doorways" }
+lotjDoorways = { version = "1.3.2", packageName = "lotj-doorways" }
 local D = lotjDoorways
 D.directions = {
   {short="n", long="north"}, {short="ne", long="northeast"},
@@ -84,7 +84,7 @@ end
 function D.printHelp()
   plainFormat()
   consoleText("heading", "\nLOTJ DOORWAYS v" .. D.version .. "\n")
-  consoleText("muted", "Save a door once. Walk through it with a direction.\n\n")
+
   consoleRows({
     {"setdoorway <dir> <command>", "Save or replace a doorway here"},
     {"doorway append <dir> <command>", "Add the next command to a saved doorway"},
@@ -96,17 +96,9 @@ function D.printHelp()
     {"doorway on / doorway off", "Enable or disable saved doorways"},
     {"doorway help", "Show this help menu"},
   })
-  consoleText("heading", "\nEXAMPLES\n")
-  consoleRows({
-    {"setdoorway east say enter", "Save a voice door"},
-    {"setdoorway ne open ne", "Save the command to open a door"},
-    {"doorway append ne ne", "Then add the movement on a separate line"},
-  })
-  consoleText("muted", "\nUse short or full directions, such as n or north.\n")
-  consoleText("muted", "Enter each setup command on its own line. Use ;; only in the editor.\n")
-  consoleText("muted", "Include the final direction if needed. Map walks send the whole saved-door stack.\n")
-  consoleText("muted", "Stop cannot recall commands already sent. No custom LotJ UI is required.\n")
-  consoleText("muted", "Setup uses your GMCP room vnum. All characters in this profile share doors.\n\n")
+  consoleText("muted", "\nExample: setdoorway ne open ne, then doorway append ne ne\n")
+  consoleText("muted", "Type those as separate lines. Use ;; only in doorway ui.\n")
+  consoleText("muted", "No custom mapper needed. Stop cannot recall sent commands.\n")
   plainFormat()
 end
 

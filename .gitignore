@@ -5,3 +5,11 @@ build/
 .upstream-ui/
 lotj-doorways.json*
 *.dat
+.env
+.env.*
+*.log
+*.bak
+*.tmp
+galaxy-snapshot.json
+lotj-cargoscanner-quotes.txt
+lotj-cargoscanner-settings.txt

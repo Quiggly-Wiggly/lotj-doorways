@@ -11,7 +11,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = "lotj-doorways"
-VERSION = "1.3.1"
+VERSION = "1.3.2"
 SOURCES = ("core.lua", "map_storage.lua", "walker.lua", "ui.lua", "runtime.lua")
 
 
